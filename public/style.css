@@ -50,6 +50,16 @@ body {
     padding: 10px;
 }
 
+.github a{
+    text-decoration: none;
+    color: #FFF; 
+}
+
+.github a:hover {
+    color: #4A6F34;
+    cursor: pointer; 
+}
+
 .logout {
     transition: all 0.3s ease-in-out;
 }
