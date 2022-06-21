@@ -299,6 +299,10 @@ color: transparent;
     .notesList form {
         flex-direction: column;
     }
+    .delete {
+        width: 100px;
+        height: 70px;
+    }
 
     .notesList .send {
         margin-top: 10px;
