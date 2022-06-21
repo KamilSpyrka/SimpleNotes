@@ -1,0 +1,10 @@
+<% if(notes.length>0) { %>
+    <% notes.forEach(function(note) { %>
+        <li>
+            <p><%= note.title %></p> 
+            <div>
+                <button class="delete" data-doc="<%=note._id%>">Delete Note</button>
+            </div>
+        </li>
+    <% }); %>
+<% } %>

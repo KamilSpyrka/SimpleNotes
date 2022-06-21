@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">Simple Notes</div>
+            <nav class="user">
+                <div class="username tile">Hi <%= username %></div>
+                <div class="logout tile"><a href="/users/logout">Logout</a></div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="notes">
+
+        <div class="notesList">
+            <div class="title">
+                <h1>Your Notes</h1>
+            </div>
+
+            <!-- Render Notes -->
+
+            <ul>
+                <%- include('./partials/notesList') %>               
+            </ul>
+
+            <!-- New Note -->
+            
+            <form action="/users/create" method="POST">
+                <input type="text" id="newNote" name="newNote" class="btn newNote" placeholder="Your note title" required>
+                <input type="submit" class="send" name="addNote" value="Add note">
+            </form>
+        </div>
+    </section>
+
+    <script>
+
+        //Delete Note
+
+        const thrash = document.querySelectorAll('button.delete').forEach(el => el.addEventListener('click', (e) =>{
+            const endpoint = `/users/delete/${el.dataset.doc}`;
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then( (response) => response.json())
+            .then ((data) => window.location.href = data.redirect)
+            .catch(err => console.log(err));
+        }));
+
+    </script>
+
+</body>
+
+</html>
