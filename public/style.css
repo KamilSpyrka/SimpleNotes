@@ -108,22 +108,25 @@ body {
 .notesList ul li {
     max-width: 100%;
     margin-bottom: 15px;
+    margin-top: 15px;
     border-bottom: 1px solid #000;
     font-size: 20px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    
+    align-items:center;
 }
 
 .notesList ul li .delete {
     padding: 5px 10px 5px 10px;
-    min-height: 30px;
+    width: 100px;
+    height: 70px;
     background-color: #E9425B;
     color: white;
     border-radius: 10px;
     margin: 0;
     margin-left: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -301,10 +304,7 @@ color: transparent;
     }
     li {
         justify-content: center;
-    }
-    .delete {
-        width: 100px;
-        height: 70px;
+        align-items: center;
     }
 
     .notesList .send {
