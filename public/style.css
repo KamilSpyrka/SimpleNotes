@@ -299,10 +299,12 @@ color: transparent;
     .notesList form {
         flex-direction: column;
     }
+    li {
+        justify-content: center;
+    }
     .delete {
         width: 100px;
         height: 70px;
-        align-self: center;
     }
 
     .notesList .send {
