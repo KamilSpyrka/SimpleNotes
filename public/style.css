@@ -302,7 +302,7 @@ color: transparent;
     .delete {
         width: 100px;
         height: 70px;
-        align-items: center;
+        align-self: center;
     }
 
     .notesList .send {
